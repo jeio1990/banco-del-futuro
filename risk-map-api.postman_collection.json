@@ -1,0 +1,81 @@
+{
+	"info": {
+		"_postman_id": "5b17fe3e-1e93-4062-a517-b618eaf4ae92",
+		"name": "risk-map-api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "calculateRisk",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://192.168.243.65:8089/risk-map?row=2&column=2&provider=bancolombia",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"243",
+						"65"
+					],
+					"port": "8089",
+					"path": [
+						"risk-map"
+					],
+					"query": [
+						{
+							"key": "row",
+							"value": "2"
+						},
+						{
+							"key": "column",
+							"value": "2"
+						},
+						{
+							"key": "provider",
+							"value": "bancolombia"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "calculateRisk - LOCALHOST",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://192.168.243.65:8089/risk-map?row=2&column=2&provider=bancolombia",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"243",
+						"65"
+					],
+					"port": "8089",
+					"path": [
+						"risk-map"
+					],
+					"query": [
+						{
+							"key": "row",
+							"value": "2"
+						},
+						{
+							"key": "column",
+							"value": "2"
+						},
+						{
+							"key": "provider",
+							"value": "bancolombia"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

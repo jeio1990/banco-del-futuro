@@ -1,0 +1,19 @@
+risk-deploy/risk-map-api/*.jar
+riskmap/.project
+riskmap/.classpath
+riskmap/.settings
+riskmap/target/
+riskmap/logs/*
+
+### IntelliJ IDEA ###
+riskmap/.idea
+riskmap/*.iws
+riskmap/*.iml
+riskmap/*.ipr
+
+
+
+### mvn ###
+riskmap/.mvn
+riskmap/mvnw
+riskmap/mvnw.cmd

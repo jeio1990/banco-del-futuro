@@ -1,0 +1,36 @@
+version: '3'
+services:
+ risk-db-mongo: 
+  build:
+   context: ./risk-map-db
+  volumes: 
+   - /opt/data_mongodb_container_risk:/data/db
+   - /etc/timezone:/etc/timezone:ro
+   - /etc/localtime:/etc/localtime:ro
+  environment: 
+   MONGO_INITDB_ROOT_USERNAME: risk
+   MONGO_INITDB_ROOT_PASSWORD: risk2020*
+   MONGO_INITDB_USERNAME: risk
+   MONGO_INITDB_PASSWORD: risk2020*
+   MONGO_DATABASE: risk
+  ports:
+   - 27020:27017
+ risk-api:
+  build:
+   context: ./risk-map-api
+   args:
+    ARTIFACT: risk-map-1.0.0.jar
+    YML: application.yml
+  volumes:
+   - /etc/timezone:/etc/timezone:ro
+   - /etc/localtime:/etc/localtime:ro
+  environment: 
+   RISK_DB: risk-db-mongo
+   RISK_DB_PORT: 27017
+   RISK_DATABASE: risk 
+   RISK_USERNAME: risk
+   RISK_PASSWORD: risk2020*
+  ports: 
+   - 8089:8082
+  depends_on: 
+   - risk-db-mongo
